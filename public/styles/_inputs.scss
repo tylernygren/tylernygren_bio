@@ -1,0 +1,14 @@
+@import 'functions';
+
+input{
+    display: block;
+    margin: rem(8) 0;
+    padding: rem(8) rem(12);
+    outline: none;
+    border: none;
+    border-radius: rem(4);
+    box-shadow: none;
+    background-color: var(--input);
+    color: var(--on-input);
+    cursor: text;
+}
