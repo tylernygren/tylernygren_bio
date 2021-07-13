@@ -11,6 +11,7 @@
   --border-color: hsl(0, 0%, 90%);
   --border-highlight: hsl(0, 0%, 100%);
   --text-focus: yellow;
+  --text-link: default;
 }
 
 .use-light-theme {
@@ -26,6 +27,7 @@
   --border-color: hsl(0, 0%, 50%);
   --border-highlight: hsl(0, 0%, 30%);
   --text-focus: hsl(215, 100%, 50%);
+  --text-link: default;
 }
 
 .with-accent {
@@ -153,6 +155,10 @@ input {
 body {
   background-color: var(--background);
   color: var(--on-background);
+}
+
+a {
+  cursor: pointer;
 }
 
 .surface {

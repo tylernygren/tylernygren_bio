@@ -3,103 +3,241 @@
 @import 'buttons';
 @import 'inputs';
 
+
 main{
-    article{
-        section{
-            .text{
-                p{
-                    margin: rem(12) 0;
-                    text-align: justify;
-                    line-height: 2;
-                }
+    .banner{
+        background-image: url('../assets/banner-image.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        margin: 0;
+        padding: 0;
+        .overlay{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: rem(350);
+            margin-top: 25%;
+            .title-1, .subtitle-1{
+                margin: rem(16) 0;
+            }
+            .action-items{
+                display: flex;
+                flex-direction: row-reverse;
+                width: 100%;
             }
         }
     }
 }
 
-@media screen and (max-width: 899px) {
-
-    main{
-        article{
+@media screen and (max-width: 599px) {
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        section{
             width: 100%;
             padding: rem(16);
-            section{
+            .text{
+                width: 100%;
+                min-height: rem(100);
+                margin: rem(8) 0;
+                .body-1, .body-2{
+                    line-height: 1.5;
+                    margin: rem(16) 0;
+                }
+            }
+            .image{
+                width: 100%;
+                min-height: rem(200);
+                margin: rem(8) 0;
+            }
+            .video{
+                width: 100%;
+                min-height: rem(200);
+                margin: rem(8) 0;
+            }
+            .collage{
                 display: flex;
                 flex-direction: column;
-                width: 100%;
-                .grid{
-                    display: flex;
-                    flex-direction: column;
-                    .grid-item{
-                        width: 100%;
-                        margin: rem(8) 0;
-                        background-color: grey;
-                    }
-                    .focus{
-                        width: 100%;
-                        margin: rem(8) 0;
-                    }
+                &--half{
+                    @extend .collage;
+                }
+                &--whole{
+                    @extend .collage;
+                }
+                *{
+                    width: 100%;
+                    margin: rem(8) 0;
                 }
             }
         }
-    }
+        aside{
+            display: none;
+        }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1199px) {
-    main{
-        article{
-            width: 100%;
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    article{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, minmax(rem(200), 1fr));
+        width: 100%;
+        section{
+            grid-column: span 4;
             padding: rem(16);
-            section{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: rem(16);
+            .text{
+                grid-column: span 2;
+            }
+            .image{
+                grid-column: span 2;
+                background-color: grey;
+            }
+            .video{
+                grid-column: span 2;
+            }
+            .collage{
                 display: grid;
-                grid-template-columns: minmax(rem(300), 1fr) minmax(rem(200), 1fr);
-                gap: rem(16);
-                width: 100%;
-                .grid{
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    grid-template-rows: repeat(5, 1fr);
-                    padding: rem(16);
-                    gap: rem(8);
-                    .grid-item{
-                        background-color: grey;
-                    }
-                    .focus{
-                        grid-column: span 4;
-                        grid-row: span 4;
-                    }
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                height: rem(600);
+                &--half{
+                    @extend .collage;
+                    grid-column: span 2;
+                }
+                &--whole{
+                    @extend .collage;
+                    grid-column: span 4;
+                }
+                .wide{
+                    grid-row: span 2;
+                }
+                .tall{
+                    grid-row: span 2;
                 }
             }
         }
-    }
+        aside{
+            display: none;
+        }
 }
 
 @media screen and (min-width: 1200px) {
-    main{
-        article{
-            width: 100%;
-            max-width: rem(1400);
+
+    article{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, minmax(rem(200), 1fr));
+        width: 100%;
+        section{
+            grid-column: 0 / span 4;
             padding: rem(16);
-            section{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: rem(16);
+            .text{
+                grid-column: span 2;
+            }
+            .image{
+                grid-column: span 2;
+                background-color: grey;
+            }
+            .video{
+                grid-column: span 2;
+            }
+            .collage{
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: rem(16);
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                height: rem(600);
+                &--half{
+                    @extend .collage;
+                    grid-column: span 2;
+                }
+                &--whole{
+                    @extend .collage;
+                    grid-column: span 4;
+                }
+                .wide{
+                    grid-row: span 2;
+                }
+                .tall{
+                    grid-row: span 2;
+                }
+            }
+        }
+        aside{
+            grid-column: 5 / 6;
+            grid-column: 0 / 4;
+            display: flex;
+            flex-direction: column;
+            .stub{
+                display: grid;
+                grid-template-columns: rem(48) 1fr;
                 width: 100%;
-                .grid{
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-template-columns: repeat(3, 1fr);
-                    padding: rem(16);
-                    gap: rem(8);
-                    .grid-item{
-                        background-color: grey;
+                margin: rem(8);
+                border-radius: rem(4); 
+                &:hover{
+                    box-shadow: var(--shadow-2);
+                }
+                .icon{
+                    background-color: grey;
+                    border-radius: rem(4) 0 0 rem(4);
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    padding: rem(6);
+                    border-radius: 0 rem(4) rem(4) 0;
+                    border: rem(1) solid lightgrey;
+                    .body-1, .body-2{
+                        width: 100%;
+                        text-align: left;
                     }
-                    .focus{
-                        grid-column-start: span 2;
-                        grid-row-start: span 2;
+                }
+                *{
+                    cursor: pointer;
+                }
+            }
+            .card{
+                display: grid;
+                grid-template-rows: rem(24) rem(48) rem(minmax(rem(14), rem(200)));
+                width: 100%;
+                margin: rem(8);
+                border-radius: rem(4); 
+                &:hover{
+                    box-shadow: var(--shadow-2);
+                }
+                .icon{
+                    background-color: grey;
+                    border-radius: rem(4) rem(4) 0 0;
+                }
+                .text{
+                    grid-row: 1 / 3;
+                    display: flex;
+                    flex-direction: column;
+                    padding: rem(6);
+                    border-radius: 0 0 rem(4) rem(4);
+                    border: rem(1) solid lightgrey;
+                    .body-1, .body-2{
+                        width: 100%;
+                        text-align: left;
                     }
+                }
+                *{
+                    cursor: pointer;
                 }
             }
         }
     }
 }
+}}

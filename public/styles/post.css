@@ -11,6 +11,7 @@
   --border-color: hsl(0, 0%, 90%);
   --border-highlight: hsl(0, 0%, 100%);
   --text-focus: yellow;
+  --text-link: default;
 }
 
 .use-light-theme {
@@ -26,6 +27,7 @@
   --border-color: hsl(0, 0%, 50%);
   --border-highlight: hsl(0, 0%, 30%);
   --text-focus: hsl(215, 100%, 50%);
+  --text-link: default;
 }
 
 .with-accent {
@@ -155,6 +157,10 @@ body {
   color: var(--on-background);
 }
 
+a {
+  cursor: pointer;
+}
+
 .surface {
   box-shadow: --shadow-2;
   border-radius: 0.25rem;
@@ -186,16 +192,8 @@ header {
   background-color: var(--surface);
   color: var(--on-surface);
 }
-header .box {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
 header .action-items {
+  z-index: 5;
   position: absolute;
   right: 0;
   left: 3rem;
@@ -212,6 +210,50 @@ header .action-items img {
 header .action-items img:hover {
   background-color: var(--button-hover);
   cursor: pointer;
+}
+header .progressbar {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.125rem;
+  background-color: var(--accent);
+  -webkit-animation-name: progressbar;
+          animation-name: progressbar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes progressbar {
+  0% {
+    left: 0;
+    right: 100vw;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100vw;
+    right: 0;
+  }
+}
+@keyframes progressbar {
+  0% {
+    left: 0;
+    right: 100vw;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100vw;
+    right: 0;
+  }
 }
 
 nav {
@@ -380,77 +422,6 @@ main {
 @media screen and (min-width: 600px) {
   .dialog {
     width: 21.875rem;
-  }
-}
-#progressbar {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: var(--shadow-8);
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  background-color: var(--surface);
-  color: var(--on-surface);
-}
-#progressbar .body-1 {
-  width: 100%;
-  margin: 0.25rem 0;
-}
-#progressbar .container {
-  width: 100%;
-  height: 0.125rem;
-  background-color: gray;
-}
-#progressbar .container .bar {
-  height: 100%;
-  background-color: var(--accent);
-  -webkit-animation-name: progress;
-          animation-name: progress;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-@media screen and (max-width: 599px) {
-  #progressbar {
-    width: 85vw;
-  }
-}
-@media screen and (min-width: 600px) {
-  #progressbar {
-    width: 21.875rem;
-  }
-}
-@-webkit-keyframes progress {
-  0% {
-    width: 0%;
-    margin-left: 0;
-  }
-  50% {
-    width: 100%;
-    margin-left: 0;
-  }
-  100% {
-    width: 0%;
-    margin-left: 100%;
-  }
-}
-@keyframes progress {
-  0% {
-    width: 0%;
-    margin-left: 0;
-  }
-  50% {
-    width: 100%;
-    margin-left: 0;
-  }
-  100% {
-    width: 0%;
-    margin-left: 100%;
   }
 }
 button {
