@@ -43,8 +43,9 @@ main{
         width: 100%;
         height: rem(52);
         margin: 0;
-        padding: rem(16);
-        background-color: grey;
+        .material-icons{
+            opacity: 60%;
+        }
     }
 }
 
