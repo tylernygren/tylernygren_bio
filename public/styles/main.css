@@ -562,7 +562,7 @@ main .banner {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: calc(100vh);
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -593,6 +593,39 @@ main .footer {
 }
 main .footer .material-icons {
   opacity: 60%;
+}
+
+.banner.shrink {
+  -webkit-animation-name: shrink;
+          animation-name: shrink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes shrink {
+  from {
+    top: 0;
+    height: 100vh;
+  }
+  to {
+    top: 4.5rem;
+    height: 50vh;
+  }
+}
+@keyframes shrink {
+  from {
+    top: 0;
+    height: 100vh;
+  }
+  to {
+    top: 4.5rem;
+    height: 50vh;
+  }
 }
 
 @media screen and (max-width: 599px) {
