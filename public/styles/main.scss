@@ -125,6 +125,7 @@ main{
             gap: rem(16);
             .text{
                 grid-column: span 2;
+                text-align: justify;
                 .body-1, .body-2{
                     line-height: 1.75;
                     margin: rem(16) 0;

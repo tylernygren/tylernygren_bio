@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 
-    <title>About</title>
-    <link rel="shortcut icon" href="favicon.svg" type="svg+xml">
+    <title>Bio | Tyler Nygren</title>
+    <link rel="shortcut icon" href="assets/favicon.svg" type="svg+xml">
 
     <script defer src="/__/firebase/8.7.0/firebase-app.js"></script>
     <script defer src="/__/firebase/8.7.0/firebase-auth.js"></script>
@@ -24,116 +24,51 @@
     <header role="heading">
       <button class="material-icons icon-button">menu</button>
       <div class="action-items">
-        <img src="assets/facebook.svg" alt="Link to Facebook">
         <img src="assets/instagram.svg" alt="Link to Instagram">
         <img src="assets/twitter.svg" alt="Link to Twitter">
-        <img src="assets/github.svg" alt="Link to GitHub">
-        <img src="assets/youtube.svg" alt="Link to Youtube">
-        <img src="assets/linkedin.svg" alt="Link to LinkedIn">
+        <img src="assets/facebook.svg" alt="Link to Facebook">
       </div>
     </header>
 
-    <nav class="tree">
-      <div class="item">
-        <span class="body-2"></span>
-        <img src="assets/dropdown.svg" alt="Dropdown arrow">
+    <nav>
+
+      <div class="list">
+        <div class="item"><span class="body-1">Bio</span></div>
+        <div class="item dropdown"><span class="body-1">Interests</span><img src="assets/dropdown.svg"></div>
+          <div class="sublist">
+            <div class="item"><span class="body-1">Chiropractic</span></div>
+            <div class="item"><span class="body-1">Web Development</span></div>
+            <div class="item"><span class="body-1">Sleight-of-Hand</span></div>
+          </div>
+        <div class="item"><span class="body-1">Lifestyle</span></div>
+        <div class="item"><span class="body-1">Contact</span></div>
       </div>
+
     </nav>
 
     <main role="main">
 
       <div class="banner">
-        <div class="overlay">
+        <div class="overlay hide">
           <div class="spacer"></div>
-          <p class="title-1">This is a title.</p>
+          <p class="title-1"></p>
+          <p class="title-2"></p>
           <div class="action-items">
-            <button class="contained-button">action 1</button>
-            <button class="text-button">action 2</button>
+            <button class="contained-button"></button>
+            <button class="text-button"></button>
           </div>
           <div class="spacer"></div>
         </div>
       </div>
 
       <article role="article">
-        <section>
-          <div class="text">
-            <p class='title-1'>Hi there!</p>
-
-            <p class="body-1">
-              I am a third generation chiropractic student, on-pace to complete the <a href="">Doctor of Chiropractic</a> degree program in March. I currently work as an intern at the Life University <a href="">Center for Health and Optimum Performance,</a> and, in May, I will begin work at <a href="">Nygren Chiropractic and Acupuncture</a> in Van Wert, Ohio.
-            </p>
-
-            <p class="body-1">
-              I live twenty miles northwest of downtown Atlanta-- and I love it. I spend much of my free time finding new coffee shops and working on projects that interest me. In the last year, I have taken a particular interest in web development. I built this website, actually!
-            </p>
-            
-          </div>
-          <div class="image"></div>
-        </section>
 
         <section>
-          <div class="text">
-            <p class='title-1'>Chiropractic</p>
-            <p class="body-1">
-              Chiropractic is Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-          </div>
-          <div class="image"></div>
+          <p class="text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, aliquid. Quae neque labore voluptas dolore nihil et nobis. Similique pariatur ipsa impedit, eius tempora consequuntur voluptas fugit labore obcaecati quam!
+          </p>
         </section>
-
-        <section>
-          <div class="text">
-            <p class='title-1'>Web Development</p>
-            <p class="body-1">
-              Chiropractic is Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-          </div>
-          <div class="image"></div>
-        </section>
-
-        <section>
-          <div class="text">
-            <p class='title-1'>Running</p>
-            <p class="body-1">
-              Chiropractic is Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-          </div>
-          <div class="image"></div>
-        </section>
-
-        <section>
-          <div class="text">
-            <p class='title-1'>Sleight-of-Hand</p>
-            <p class="body-1">
-              Chiropractic is Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-            <p class="body-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus maxime, tempora deserunt facilis optio minima nam, architecto iste possimus necessitatibus sapiente ipsam? Quos consectetur repellat vero ipsum unde iste maxime?
-            </p>
-          </div>
-          <div class="image"></div>
-        </section>
+      
       </article>
 
       <div class="footer">
