@@ -125,21 +125,8 @@ body{
 a{
     cursor: pointer;
 }
-@mixin surface($padding, $shadow){
-    box-shadow: $shadow;
-    border-radius: rem(4);
-    padding: $padding;
-    background-color: var(--surface);
-    color: var(--on-surface);
-}
-.surface{
-    @include surface(rem(12), --shadow-2);
-}
 .hide{
     visibility: hidden;
-}
-.exclude{
-    display: none;
 }
 
 //LAYOUT
@@ -211,53 +198,61 @@ nav{
     left: 0;
     bottom: 0;
     // width: rem(225);
-    // display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: rem(16);
     box-shadow: none;
     background-color: inherit;
     color: inherit;
 
-    a, .item{
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
-        padding: rem(12) rem(6) rem(6) rem(6);
-        color: var(--on-background);
-        text-decoration: none;
-        cursor: pointer;
-        border-radius: 0 rem(4) rem(4) 0;
-        &:hover{
-            background-color: var(--button-hover);
+        margin-top: rem(16);
+        .item{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            padding: rem(8);
+            border-radius: 0 rem(4) rem(4) 0;
+            .body-1{
+                flex-grow: 1;
+                cursor: pointer;
+            }
+            img{
+                cursor: pointer;
+            }
+            &:hover{
+                background-color: var(--button-hover);
+            }
         }
+        .sublist{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            .item{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                padding: rem(8);
+                padding-left: rem(24);
+                border-radius: 0 rem(4) rem(4) 0;
+                .body-1{
+                    flex-grow: 1;
+                    cursor: pointer;
+                }
+                img{
+                    cursor: pointer;
+                }
+                &:hover{
+                    background-color: var(--button-hover);
+                } 
+            }
+        }
+
     }
-
-    .subitem{
-
-        @extend .item;
-            padding: rem(6) rem(6) rem(6) rem(18);
-
-        &-1{
-            @extend .subitem;
-            padding-left: rem(30);
-        }
-        &-2{
-            @extend .subitem;
-            padding-left: rem(42);
-        }
-        &-3{
-            @extend .subitem;
-            padding-left: rem(54);
-        }
-        &-4{
-            @extend .subitem;
-            padding-left: rem(66);
-        }
-        &-5{
-            @extend .subitem;
-            padding-left: rem(78);
-        }
-    }
-
 }
 main{
     position: fixed;
@@ -327,7 +322,6 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    @include surface(rem(4), var(--shadow-4));
     margin-right: rem(14);
     z-index: 10;
     *{
@@ -361,7 +355,6 @@ main{
     // display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @include surface(rem(8), var(--shadow-8));
     .subtitle-1{
         margin: rem(4);
     }
