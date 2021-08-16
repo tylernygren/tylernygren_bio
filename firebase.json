@@ -10,10 +10,6 @@
       {
         "source": "**",
         "destination": "/temp.html"
-      },
-      {
-        "source": "/health",
-        "destination": "/present.html"
       }
     ]
   }
