@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+
+        // tab
+        title #{title} | Tyler Nygren
+            
+        link(rel="shortcut icon", href="favicon.svg", type="svg+xml")
+
+        // stylesheets
+        link(rel="stylesheet", href="styles/desktop.css", media="screen and (min-width: 1200px)")
+        link(rel="stylesheet", href="styles/tablet.css", media="screen and (min-width: 400px) and (max-width: 1200)")
+        link(rel="stylesheet", href="styles/mobile.css", media="screen and (max-width: 400px)")
+        block styles
+
+    body
+        .progressbar.hide
+
+        .menubar
+            a.body-1(href="/about" style="order: 6;") Bio
+            a.body-1(href="/career" style="order: 5;") Career
+            a.body-1(href="/interests" style="order: 4;") Interests
+            a.body-1(href="/presentations" style="order: 3;") Presentations
+            a.body-1(href="/media" style="order: 2;") Media
+            a.body-1(href="/contact" style="order: 1;") Contact
+
+
+        block scripts
+            script(defer src="/__/firebase/8.7.0/firebase-app.js")
+            
+
+
+
+

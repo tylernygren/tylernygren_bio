@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "client",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,8 +9,15 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/temp.html"
+        "function": "app"
       }
     ]
+  },
+  "functions": {
+    "source": "server"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }

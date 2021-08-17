@@ -3,8 +3,8 @@
 //COLORS
 
 :root{
-    --accent: rgb(50, 155, 85);
-    --accent-hover: rgb(50, 155, 90);;
+    --accent: hsl(0, 68%, 42%);
+    --accent-hover: hsl(0, 68%, 47%);
     --on-accent: white;
 }
 .use-dark-theme {
@@ -119,14 +119,6 @@ $text-font: 'Roboto';
 .collapse{
     visibility: collapse;
 }
-@keyframes fade {
-    0%{
-        opacity: 100%;
-    }
-    100%{
-        opacity: 0%;
-    }
-}
 
 // COMPONENTS
 
@@ -142,10 +134,12 @@ $text-font: 'Roboto';
 @import 'image';
 @import 'input';
 @import 'list';
+@import 'menubar';
 @import 'progressbar';
 @import 'searchbar';
 @import 'slider';
 @import 'storefront';
 @import 'table';
+@import 'upload';
 @import 'video';
 

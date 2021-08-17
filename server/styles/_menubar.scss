@@ -1,0 +1,16 @@
+@import 'functions';
+.menubar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: rem(48);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    a{
+        margin: 0 rem(8);
+        padding: rem(6);
+    }
+}
