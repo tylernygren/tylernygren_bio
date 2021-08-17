@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+
+        // tab
+        title About | Tyler Nygren
+        link(rel="shortcut icon", href="favicon.svg", type="svg+xml")
+
+        // stylesheets
+        link(rel="stylesheet", href="styles/desktop.css", media="screen and (min-width: 400px)")
+        link(rel="stylesheet", href="styles/tablet.css", media="screen and (min-width: 400px) and (any-pointer: none)")
+        link(rel="stylesheet", href="styles/mobile.css", media="screen and (max-width: 400px) and (any-pointer: none)")
+
+        // scripts
+        script(defer src="/__/firebase/8.7.0/firebase-app.js")
+        script(defer src="/__/firebase/8.7.0/firebase-auth.js")
+
+    body
+        nav
+            .progressbar
+            .subtitle-1
+            a(href="/career") Career
+            a(href="/interests") Interests
+            a(href="/presentations") Presentations
+            a(href="/media") Media
+            a(href="/contact") Contact
+
+        article
+            section
+                .banner
+                .overlay
+            section
+                .list.body-1
+                    .item - Student by day
+                    .item - Developer by night
+                    .item - Magician at children's parties
+            
+
+
+
+
