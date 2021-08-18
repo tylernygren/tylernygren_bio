@@ -3,7 +3,7 @@
   "description": "Cloud Functions for Firebase",
   "scripts": {
     "start": "sass ./styles:../client/styles && firebase serve",
-    "serve": "nodemon firebase emulators:start",
+    "serve": "firebase emulators:start",
     "deploy": "firebase deploy",
     "logs": "firebase functions:log",
     "sass": "sass ./styles:../client/styles"
