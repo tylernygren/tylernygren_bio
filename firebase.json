@@ -17,7 +17,7 @@
     "source": "server"
   },
   "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
+    "rules": "server/database/firestore.rules",
+    "indexes": "server/database/firestore.indexes.json"
   }
 }
