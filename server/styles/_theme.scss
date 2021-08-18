@@ -3,8 +3,8 @@
 //COLORS
 
 :root{
-    --accent: hsl(0, 68%, 42%);
-    --accent-hover: hsl(0, 68%, 47%);
+    --accent: hsl(289, 21%, 30%);
+    --accent-hover: hsl(289, 28%, 30%);
     --on-accent: white;
 }
 .use-dark-theme {
@@ -24,11 +24,11 @@
 .use-light-theme{
     --background: white;
     --surface: white;
-    --input: hsl(0, 0%, 90%);
+    --input: hsl(289, 28%,85%);
     --button-hover: hsl(0,0%,90%);
-    --on-background: hsl(0, 0%, 10%);
-    --on-surface: hsl(0, 0%, 10%);
-    --on-input: hsl(0, 0%, 10%);
+    --on-background: hsl(289, 21%, 12%);
+    --on-surface: hsl(289, 21%, 12%);
+    --on-input: hsl(289, 21%, 12%);
     --on-button-hover: hsl(0, 0%, 80%);
     --border-color: hsl(0, 0%, 50%);
     --border-highlight: hsl(0, 0%, 30%);

@@ -1,6 +1,9 @@
-#spotlight {
-  height: 25rem;
-  width: 25rem;
+.spotlight {
+  position: fixed;
+  top: 30vw;
+  left: -30vw;
+  height: 100vw;
+  width: 100vw;
   border-radius: 50%;
   background-color: var(--accent);
 }

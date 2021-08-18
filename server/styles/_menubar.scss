@@ -7,10 +7,17 @@
     height: rem(48);
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: stretch;
 
     a{
+        vertical-align: middle;
         margin: 0 rem(8);
         padding: rem(6);
+        color: var(--accent);
+        text-decoration: none;
+        &:hover{
+            color: var(--text-focus);
+            border-bottom: solid rem(2) black;
+        }
     }
 }

@@ -1,12 +1,11 @@
 @import 'functions';
 
-#spotlight{
-    height: rem(400);
-    width: rem(400);
+.spotlight{
+    position: fixed;
+    top: 30vw;
+    left: -30vw;
+    height: 100vw;
+    width: 100vw;
     border-radius: 50%;
     background-color: var(--accent);
-}
-
-.body-1{
-    color: var(--on-accent);
 }
