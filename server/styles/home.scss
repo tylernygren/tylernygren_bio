@@ -1,0 +1,8 @@
+@import 'functions';
+
+#spotlight{
+    height: rem(400);
+    width: rem(400);
+    border-radius: 50%;
+    background-color: var(--accent);
+}
