@@ -8,8 +8,7 @@ html(lang="en")
 
         // tab
         title #{title} | Tyler Nygren
-            
-        link(rel="shortcut icon", href="favicon.svg", type="svg+xml")
+        link(rel="shortcut icon", href=`/icons/${ icon }`, type="svg+xml")
 
         // stylesheets
         link(rel="stylesheet", href="styles/desktop.css", media="screen and (min-width: 1200px)")
@@ -28,6 +27,7 @@ html(lang="en")
             a.body-1(href="/media" style="order: 2;") Media
             a.body-1(href="/contact" style="order: 1;") Contact
 
+        block main
 
         block scripts
             script(defer src="/__/firebase/8.7.0/firebase-app.js")
