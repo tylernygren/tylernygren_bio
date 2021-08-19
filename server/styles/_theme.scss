@@ -6,6 +6,9 @@
     --accent: hsl(289, 21%, 30%);
     --accent-hover: hsl(289, 28%, 30%);
     --on-accent: white;
+    --compliment: hsl(60, 100%, 50%);
+    --compliment-hover: hsl(60, 100%, 60%);
+    --on-compliment: hsl(289, 21%, 12%);
 }
 .use-dark-theme {
     --background: hsl(0, 0%, 10%);
@@ -46,7 +49,18 @@ body{
     color: var(--on-surface);
 }
 .accent{
-
+    background-color: var(--accent);
+    color: var(--on-accent);
+}
+.compliment{
+    background-color: var(--compliment);
+    color: var(--on-compliment);
+}
+.surface{
+    background-color: var(--surface);
+    color: var(--on-surface);
+    padding: rem(8);
+    border-radius: rem(4);
 }
 
 //FONTS

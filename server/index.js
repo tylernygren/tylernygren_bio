@@ -6,7 +6,7 @@ app.set('view engine', 'pug');
 // app.use('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Home', icon: 'home.svg'});
+    res.render('home', { title: 'Home', icon: 'home'});
 });
 
 exports.app = functions.https.onRequest(app);

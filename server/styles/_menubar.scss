@@ -20,4 +20,8 @@
             border-bottom: solid rem(2) black;
         }
     }
+    .active{
+        background-color: var(--accent);
+        color: var(--on-accent);
+    }
 }
