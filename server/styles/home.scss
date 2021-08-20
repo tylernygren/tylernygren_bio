@@ -1,16 +1,3 @@
 @import 'functions';
 
-.footer{
-    position: fixed;
-    bottom: rem(8);
-    right: rem(36);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.icon{
-    svg{
-        height: rem(24);
-        width: rem(24);
-    }
-}
+

@@ -8,26 +8,29 @@ html(lang="en")
 
         // tab
         title #{title} | Tyler Nygren
-        link(rel="shortcut icon", href=`icons/${ icon }.svg`, type="svg+xml")
+        //- link(rel="shortcut icon", href=`icons/${ icon }.svg`, type="svg+xml")
 
         // stylesheets
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(rel="stylesheet", href="styles/theme.css")
         link(rel="stylesheet", href="styles/desktop.css", media="screen and (min-width: 1200px)")
-        link(rel="stylesheet", href="styles/tablet.css", media="screen and (min-width: 400px) and (max-width: 1200)")
-        link(rel="stylesheet", href="styles/mobile.css", media="screen and (max-width: 400px)")
+        //- link(rel="stylesheet", href="styles/tablet.css", media="screen and (min-width: 400px) and (max-width: 1200)")
+        //- link(rel="stylesheet", href="styles/mobile.css", media="screen and (max-width: 400px)")
         block styles
 
         //scripts
         script(defer src="/__/firebase/8.7.0/firebase-app.js")
-        script(defer src="scripts/icon.js")
     body
         .progressbar.hide
         .menubar
-            a.subtitle-1(href="/about" style="order: 6;") Bio
+            a.subtitle-1.active(href="/about" style="order: 6;") Bio
             a.subtitle-1(href="/career" style="order: 5;") Career
             a.subtitle-1(href="/interests" style="order: 4;") Interests
             a.subtitle-1(href="/presentations" style="order: 3;") Presentations
             a.subtitle-1(href="/media" style="order: 2;") Media
             a.subtitle-1(href="/contact" style="order: 1;") Contact
+        .site-info
+            .material-icons info
         
         block main
 

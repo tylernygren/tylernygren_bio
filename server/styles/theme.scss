@@ -1,0 +1,134 @@
+@import 'functions';
+
+//COLORS
+
+:root{
+    --accent: hsl(289, 21%, 30%);
+    --accent-highlight: hsl(289, 28%, 30%);
+    --on-accent: white;
+    --compliment: hsl(60, 100%, 50%);
+    --compliment-highlight: hsl(60, 100%, 60%);
+    --on-compliment: hsl(289, 21%, 12%);
+}
+.use-dark-theme {
+    // element colors
+    --background: hsl(289, 39%, 47%);
+    --surface: hsl(289, 21%, 5%);
+    // text colors
+    --on-background: white;
+    --on-surface: white;
+
+}
+.use-light-theme{
+    // element colors
+    --background: white;
+    --surface: white;
+    // text colors
+    --on-background: hsl(289, 21%, 20%);
+    --on-surface: hsl(289, 21%, 20%);
+}
+body{
+    background-color: var(--background);
+    color: var(--on-background);
+}
+.surface{
+    padding: rem(8);
+    border-radius: rem(4);
+    background-color: var(--surface);
+    color: var(--on-surface);
+}
+.accent{
+    background-color: var(--accent);
+    color: var(--on-accent);
+}
+.compliment{
+    background-color: var(--compliment);
+    color: var(--on-compliment);
+}
+.surface{
+    background-color: var(--surface);
+    color: var(--on-surface);
+    padding: rem(8);
+    border-radius: rem(4);
+}
+
+//FONTS
+
+:root{
+    --title-font: 'Open Sans';
+    --text-font: 'Roboto';
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@mixin font($type, $weight, $size, $case, $spacing, $cursor){
+    font-family: $type;
+    font-weight: $weight;
+    font-size: rem($size);
+    text-transform: $case;
+    letter-spacing: rem($spacing);
+    cursor: $cursor;
+}
+.title-1{
+    @include font(var(--title-font), 500, 36, none, 0, default);
+}
+.title-2{
+    @include font(var(--title-font), 500, 28, none, 0.25, default);
+}
+.subtitle-1{
+    @include font(var(--title-font), 500, 24, none, 0, default);
+}
+.subtitle-2{
+    @include font(var(--title-font), 500, 18, none, 0.5, default);
+}
+.body-1{
+    @include font(var(--text-font), 500, 16, none, 0.25, default);
+}
+.body-2{
+    @include font(var(--text-font), 500, 14, none, 0.25, default);
+}
+.caption{
+    @include font(var(--title-font), 300, 14, none, 0.4, default);
+}
+.label{
+    @include font(var(--title-font), 300, 14, none, 1.5, default);
+}
+
+// EXCLUDE & HIDE
+
+.exclude{
+    display: none;
+}
+.include{
+    display: block;
+}
+.hide{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.collapse{
+    visibility: collapse;
+}
+
+// BASIC COMPONENTS
+
+@import 'alert';
+@import 'button';
+@import 'dialog';
+@import 'icon';
+@import 'image';
+@import 'input';
+@import 'list';
+@import 'menubar';
+@import 'progressbar';
+@import 'slider';
+@import 'table';
+@import 'upload';
+@import 'video';

@@ -15,13 +15,18 @@
         padding: rem(6);
         color: var(--accent);
         text-decoration: none;
+        cursor: pointer;
         &:hover{
-            color: var(--text-focus);
-            border-bottom: solid rem(2) black;
+            border-bottom: solid rem(2) (--accent);
         }
     }
     .active{
         background-color: var(--accent);
         color: var(--on-accent);
+        border-bottom: solid rem(2) (--accent);
+        &:hover{
+            background-color: var(--accent-highlight);
+            color: var(--on-accent);
+        }
     }
 }

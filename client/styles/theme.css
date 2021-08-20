@@ -1,0 +1,259 @@
+:root {
+  --accent: hsl(289, 21%, 30%);
+  --accent-highlight: hsl(289, 28%, 30%);
+  --on-accent: white;
+  --compliment: hsl(60, 100%, 50%);
+  --compliment-highlight: hsl(60, 100%, 60%);
+  --on-compliment: hsl(289, 21%, 12%);
+}
+
+.use-dark-theme {
+  --background: hsl(289, 39%, 47%);
+  --surface: hsl(289, 21%, 5%);
+  --on-background: white;
+  --on-surface: white;
+}
+
+.use-light-theme {
+  --background: white;
+  --surface: white;
+  --on-background: hsl(289, 21%, 20%);
+  --on-surface: hsl(289, 21%, 20%);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+}
+
+.surface {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+.accent {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.compliment {
+  background-color: var(--compliment);
+  color: var(--on-compliment);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+:root {
+  --title-font: "Open Sans";
+  --text-font: "Roboto";
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+.title-1 {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 2.25rem;
+  text-transform: none;
+  letter-spacing: 0rem;
+  cursor: default;
+}
+
+.title-2 {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 1.75rem;
+  text-transform: none;
+  letter-spacing: 0.015625rem;
+  cursor: default;
+}
+
+.subtitle-1 {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: none;
+  letter-spacing: 0rem;
+  cursor: default;
+}
+
+.subtitle-2 {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-transform: none;
+  letter-spacing: 0.03125rem;
+  cursor: default;
+}
+
+.body-1 {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0.015625rem;
+  cursor: default;
+}
+
+.body-2 {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: 0.015625rem;
+  cursor: default;
+}
+
+.caption {
+  font-family: var(--title-font);
+  font-weight: 300;
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: 0.025rem;
+  cursor: default;
+}
+
+.label {
+  font-family: var(--title-font);
+  font-weight: 300;
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: 0.09375rem;
+  cursor: default;
+}
+
+.exclude {
+  display: none;
+}
+
+.include {
+  display: block;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.text-button {
+  color: inherit;
+  text-shadow: none;
+  cursor: pointer;
+  background-color: inherit;
+  box-shadow: none;
+  margin: 0.25rem;
+  border-width: 0;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: 0;
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.078125rem;
+  cursor: pointer;
+}
+
+.material-icons {
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  background-color: var(--input);
+  color: var(--on-input);
+  cursor: text;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+}
+.menubar a {
+  vertical-align: middle;
+  margin: 0 0.5rem;
+  padding: 0.375rem;
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+.menubar a:hover {
+  border-bottom: solid 0.125rem --accent;
+}
+.menubar .active {
+  background-color: var(--accent);
+  color: var(--on-accent);
+  border-bottom: solid 0.125rem --accent;
+}
+.menubar .active:hover {
+  background-color: var(--accent-highlight);
+  color: var(--on-accent);
+}
+
+.progressbar {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  background-color: var(--accent);
+  animation-name: progress;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes progress {
+  0% {
+    left: 0;
+    right: 100vw;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100vw;
+    right: 0;
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */

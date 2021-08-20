@@ -1,3 +1,18 @@
 @import 'functions';
-@import 'theme';
 
+.site-info{
+    position: fixed;
+    bottom: rem(8);
+    left: rem(8);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .material-icons{
+        border-radius: rem(4);
+        color: var(--accent);
+        &:hover{
+            color: var(--accent-hover);
+            background-color: var(--button-hover);
+        }
+    }
+}
