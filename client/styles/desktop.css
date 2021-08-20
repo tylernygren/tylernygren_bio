@@ -1,7 +1,10 @@
 :root {
-  --accent: #563c5c;
-  --accent-hover: hsl(68, 100%, 55%);
+  --accent: hsl(289, 21%, 30%);
+  --accent-hover: hsl(289, 28%, 30%);
   --on-accent: white;
+  --compliment: hsl(60, 100%, 50%);
+  --compliment-hover: hsl(60, 100%, 60%);
+  --on-compliment: hsl(289, 21%, 12%);
 }
 
 .use-dark-theme {
@@ -22,11 +25,11 @@
 .use-light-theme {
   --background: white;
   --surface: white;
-  --input: hsl(0, 0%, 90%);
-  --button-hover: hsl(0,0%,90%);
-  --on-background: hsl(0, 0%, 10%);
-  --on-surface: hsl(0, 0%, 10%);
-  --on-input: hsl(0, 0%, 10%);
+  --input: hsl(289, 28%, 85%);
+  --button-hover: hsl(289, 28%, 85%);
+  --on-background: hsl(289, 21%, 12%);
+  --on-surface: hsl(289, 21%, 12%);
+  --on-input: hsl(289, 21%, 12%);
   --on-button-hover: hsl(0, 0%, 80%);
   --border-color: hsl(0, 0%, 50%);
   --border-highlight: hsl(0, 0%, 30%);
@@ -44,6 +47,23 @@ body {
   border-radius: 0.25rem;
   background-color: var(--surface);
   color: var(--on-surface);
+}
+
+.accent {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.compliment {
+  background-color: var(--compliment);
+  color: var(--on-compliment);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 @font-face {
@@ -192,6 +212,10 @@ input {
 .menubar a:hover {
   color: var(--text-focus);
   border-bottom: solid 0.125rem black;
+}
+.menubar .active {
+  background-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .progressbar {

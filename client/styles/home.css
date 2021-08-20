@@ -1,11 +1,20 @@
-.spotlight {
+.footer {
   position: fixed;
-  top: 30vw;
-  left: -30vw;
-  height: 100vw;
-  width: 100vw;
-  border-radius: 50%;
-  background-color: var(--accent);
+  bottom: 0.5rem;
+  right: 2.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon svg {
+  --svg-color: red;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.icon svg image {
+  height: 2.25rem;
+  width: 2.25rem;
 }
 
 /*# sourceMappingURL=home.css.map */

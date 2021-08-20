@@ -19,7 +19,6 @@ html(lang="en")
         //scripts
         script(defer src="/__/firebase/8.7.0/firebase-app.js")
         script(defer src="scripts/icon.js")
-
     body
         .progressbar.hide
         .menubar
@@ -29,10 +28,7 @@ html(lang="en")
             a.subtitle-1(href="/presentations" style="order: 3;") Presentations
             a.subtitle-1(href="/media" style="order: 2;") Media
             a.subtitle-1(href="/contact" style="order: 1;") Contact
-        .icon(style="position: fixed; top: 20%; left: 50%;") info
-        .footer
-            .caption Made by Tyler Nygren
-
+        
         block main
 
         block scripts
