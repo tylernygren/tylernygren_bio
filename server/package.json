@@ -2,11 +2,11 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
-    "start": "sass ./styles:../client/styles && firebase serve",
+    "start": "firebase serve",
     "serve": "firebase emulators:start",
     "deploy": "firebase deploy",
     "logs": "firebase functions:log",
-    "sass": "sass ./styles:../client/styles"
+    "sass": "sass --watch ./styles:../client/styles"
   },
   "engines": {
     "node": "14"

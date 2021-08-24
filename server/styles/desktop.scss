@@ -1,5 +1,70 @@
 @import 'functions';
+.section{
+    width: 100%;
+    margin-top: rem(48);
+    padding: rem(12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title-1{
+        margin-bottom: rem(18);
+    }
+    .subtitle-1{
+        margin-bottom: rem(12);
+    }
+    .body-1{
+        margin-bottom: rem(8);
+    }
+}
 
+// apply to .section
+    .centered{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .columns{
+        gap: rem(16);
+        &-2{
+            @extend .columns;
+            display: grid;
+            grid-template-columns: repeat(2, max(rem(400)));
+        }
+        &-4{
+            @extend .columns;
+            display: grid;
+            grid-template-columns: repeat(4, max(rem(200)));
+        }
+    }
+
+.scroll-prompt{
+    position: fixed;
+    // bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    background-color: transparent;
+    animation: scrollPrompt 1s ease-out 1s 1 forwards;
+    .material-icons{
+        font-size: rem(48);
+        color: var(--accent);
+    }
+    @keyframes scrollPrompt {
+        0%{
+            opacity: 40%;
+            visibility: visible;
+            bottom: rem(48);
+        }
+        100%{
+            opacity: 100%;
+            visibility: visible;
+            bottom: 0;
+        }
+    }
+}
 .site-info{
     position: fixed;
     bottom: rem(8);
@@ -7,12 +72,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: var(--background);
+    border-radius: rem(4);
     .material-icons{
-        border-radius: rem(4);
         color: var(--accent);
         &:hover{
             color: var(--accent-hover);
-            background-color: var(--button-hover);
         }
     }
 }

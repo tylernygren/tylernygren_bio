@@ -1,32 +1,38 @@
-@import 'functions';
-.menubar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: rem(48);
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: stretch;
+@use 'functions';
 
-    a{
-        vertical-align: middle;
-        margin: 0 rem(8);
-        padding: rem(6);
-        color: var(--accent);
-        text-decoration: none;
-        cursor: pointer;
-        &:hover{
-            border-bottom: solid rem(2) (--accent);
+@media screen and (min-width: rem(600)){
+    .menubar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: rem(48);
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+        background-color: var(--background);
+        a{
+            vertical-align: middle;
+            margin: 0 rem(8);
+            padding: rem(6);
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                border-bottom: solid rem(2) var(--accent);
+            }
         }
-    }
-    .active{
-        background-color: var(--accent);
-        color: var(--on-accent);
-        border-bottom: solid rem(2) (--accent);
-        &:hover{
-            background-color: var(--accent-highlight);
+        .active{
+            background-color: var(--accent);
             color: var(--on-accent);
+            border-bottom: solid rem(2) var(--accent);
+            &:hover{
+                background-color: var(--accent-highlight);
+                color: var(--on-accent);
+            }
         }
     }
+}
+@media screen and (max-width: rem(600)){
+    // 
 }
