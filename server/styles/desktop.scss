@@ -1,41 +1,14 @@
 @import 'functions';
-.section{
-    width: 100%;
-    margin-top: rem(48);
-    padding: rem(12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .title-1{
-        margin-bottom: rem(18);
-    }
-    .subtitle-1{
-        margin-bottom: rem(12);
-    }
-    .body-1{
-        margin-bottom: rem(8);
-    }
-}
 
-// apply to .section
-    .centered{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .columns{
-        gap: rem(16);
-        &-2{
-            @extend .columns;
-            display: grid;
-            grid-template-columns: repeat(2, max(rem(400)));
-        }
-        &-4{
-            @extend .columns;
-            display: grid;
-            grid-template-columns: repeat(4, max(rem(200)));
-        }
-    }
+.title-1, .tile-2{
+    margin-bottom: rem(18);
+}
+.subtitle-1, .subtitle-2{
+    margin-bottom: rem(12);
+}
+.body-1, .body-2{
+    margin-bottom: rem(8);
+}
 
 .scroll-prompt{
     position: fixed;
