@@ -1,37 +1,13 @@
-.section {
-  width: 100%;
-  margin-top: 3rem;
-  padding: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section .title-1 {
+.title-1, .tile-2 {
   margin-bottom: 1.125rem;
 }
-.section .subtitle-1 {
+
+.subtitle-1, .subtitle-2 {
   margin-bottom: 0.75rem;
 }
-.section .body-1 {
+
+.body-1, .body-2 {
   margin-bottom: 0.5rem;
-}
-
-.centered {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.columns, .columns-4, .columns-2 {
-  gap: 1rem;
-}
-.columns-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 25rem);
-}
-.columns-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 12.5rem);
 }
 
 .scroll-prompt {
