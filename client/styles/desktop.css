@@ -23,7 +23,7 @@
 }
 .scroll-prompt .material-icons {
   font-size: 3rem;
-  color: var(--accent);
+  color: var(--on-accent);
 }
 @keyframes scrollPrompt {
   0% {
@@ -42,17 +42,14 @@
   position: fixed;
   bottom: 0.5rem;
   left: 0.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--surface);
+  color: var(--on-surface);
   border-radius: 0.25rem;
-}
-.site-info .material-icons {
-  color: var(--accent);
-}
-.site-info .material-icons:hover {
-  color: var(--accent-hover);
 }
 
 /*# sourceMappingURL=desktop.css.map */
