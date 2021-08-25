@@ -11,7 +11,7 @@ html(lang="en")
         //- link(rel="shortcut icon", href=`icons/${ icon }.svg`, type="svg+xml")
 
         // stylesheets
-        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet")
         link(rel="stylesheet", href="styles/theme.css")
         link(rel="stylesheet", href="styles/desktop.css", media="screen and (min-width: 1200px)")
         //- link(rel="stylesheet", href="styles/tablet.css", media="screen and (min-width: 400px) and (max-width: 1200)")
@@ -20,7 +20,7 @@ html(lang="en")
 
         //scripts
         script(defer src="/__/firebase/8.7.0/firebase-app.js")
-    body
+    body.use-light-theme
         .progressbar.hide
         .menubar
             a.subtitle-1.active(href="/about" style="order: 6;") Bio

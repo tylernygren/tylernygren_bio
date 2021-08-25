@@ -23,7 +23,7 @@
     animation: scrollPrompt 1s ease-out 1s 1 forwards;
     .material-icons{
         font-size: rem(48);
-        color: var(--accent);
+        color: var(--on-accent);
     }
     @keyframes scrollPrompt {
         0%{
@@ -42,15 +42,12 @@
     position: fixed;
     bottom: rem(8);
     left: rem(8);
+    width: rem(36);
+    height: rem(36);
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--background);
+    background-color: var(--surface);
+    color: var(--on-surface);
     border-radius: rem(4);
-    .material-icons{
-        color: var(--accent);
-        &:hover{
-            color: var(--accent-hover);
-        }
-    }
 }
