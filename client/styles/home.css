@@ -1,6 +1,6 @@
 #frame-1 {
   width: 100%;
-  height: 60vh;
+  height: 55vh;
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -13,7 +13,23 @@
   background-color: var(--background);
   color: var(--on-background);
   grid-column: 3/8;
-  grid-row: 6/9;
+  grid-row: 5/auto;
+  box-shadow: var(--shadow--2);
+  border-left: solid 0.75rem var(--accent);
+}
+#frame-1 .text .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#frame-1 .text .social .glyph {
+  height: 2.25rem;
+  width: 2.25rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 #frame-1 .image {
   grid-column: 7/11;
@@ -21,16 +37,19 @@
   width: 100%;
   height: 100%;
   border-radius: 0.25rem;
-  background-color: grey;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow--1);
 }
 
 #frame-2 {
   width: 100%;
-  height: 40vh;
+  min-height: 45vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  padding: 2.25rem 1rem;
+  gap: 2rem;
+  padding: 2rem;
   background-color: var(--accent);
   color: var(--on-accent);
 }
@@ -46,6 +65,76 @@
 #frame-2 .column .body-1 {
   text-align: justify;
   line-height: 1.5;
+}
+
+#frame-3 {
+  width: 100%;
+  height: 50vw;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+#frame-3 .grid {
+  grid-column: 2/7;
+  grid-row: 2/12;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+#frame-3 .grid .item, #frame-3 .grid .item--wide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow--1);
+}
+#frame-3 .grid .item--wide {
+  grid-column: span 2;
+}
+#frame-3 .text {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--background);
+  color: var(--on-background);
+  grid-column: 7/12;
+  grid-row: 2/12;
+}
+#frame-3 .text .dropdown {
+  display: grid;
+  grid-template-columns: 1fr 2.25rem;
+  grid-template-rows: 2.25rem 0rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow--1);
+}
+#frame-3 .text .dropdown .subtitle-1 {
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+#frame-3 .text .dropdown .body-1 {
+  margin: 0.375rem 0;
+}
+#frame-3 .text .dropdown .material-icons {
+  padding: 0.375rem;
+  cursor: pointer;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#footer .material-icons {
+  padding: 0.375rem;
+  margin: 0.375rem;
+  font-size: 1.75rem;
+  color: var(--accent);
 }
 
 /*# sourceMappingURL=home.css.map */
