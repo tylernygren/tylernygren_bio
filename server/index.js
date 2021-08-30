@@ -7,7 +7,10 @@ app.set('view engine', 'pug');
 // app.use('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Home'});
+    res.render('home', { title: 'Bio'});
+});
+app.get('/chiropractic', (req, res) => {
+    res.render('chiropractic', { title: 'Chiropractic' });
 });
 
 exports.app = functions.https.onRequest(app);
