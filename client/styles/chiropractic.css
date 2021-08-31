@@ -13,6 +13,10 @@
   background-color: var(--background);
   color: var(--on-background);
 }
+#frame-1 .section .body-1 {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
 #frame-1 .section .dropdown {
   display: grid;
   grid-template-columns: 1fr 2.25rem;
