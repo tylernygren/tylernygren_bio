@@ -3,12 +3,11 @@
 #frame-1{
     width: 100%;
     min-height: 40vh;
-    margin-top: rem(48);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: rem(16);
-    padding: rem(36) rem(72);
+    padding: rem(72);
     .section{
         padding: rem(16);
         border-radius: rem(4);
@@ -35,6 +34,12 @@
             }
         }
     }
+}
+#frame-2{
+    height: 60vh;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--on-accent);
 }
 #footer{
     display: flex;

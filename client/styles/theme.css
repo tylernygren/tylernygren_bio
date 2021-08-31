@@ -57,30 +57,6 @@ body::-webkit-scrollbar-button {
   display: none;
 }
 
-.surface {
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  background-color: var(--surface);
-  color: var(--on-surface);
-}
-
-.accent {
-  background-color: var(--accent);
-  color: var(--on-accent);
-}
-
-.compliment {
-  background-color: var(--compliment);
-  color: var(--on-compliment);
-}
-
-.surface {
-  background-color: var(--surface);
-  color: var(--on-surface);
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-}
-
 :root {
   --title-font: "Open Sans";
   --text-font: "Roboto";
@@ -189,6 +165,23 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
+.accent {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.compliment {
+  background-color: var(--compliment);
+  color: var(--on-compliment);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
 .exclude {
   display: none;
 }
@@ -207,6 +200,25 @@ body::-webkit-scrollbar-button {
 
 .collapse {
   visibility: collapse;
+}
+
+.text-button {
+  color: inherit;
+  text-shadow: none;
+  cursor: pointer;
+  background-color: inherit;
+  box-shadow: none;
+  margin: 0.25rem;
+  border-width: 0;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: 0;
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.078125rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=theme.css.map */

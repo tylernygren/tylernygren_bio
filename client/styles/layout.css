@@ -1,15 +1,45 @@
 .title-1, .tile-2 {
   margin-bottom: 1.125rem;
+  line-height: 1.5;
 }
 
 .subtitle-1, .subtitle-2 {
   margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
 .body-1, .body-2 {
   margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
+.progressbar {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  background-color: var(--accent);
+  animation-name: progress;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes progress {
+  0% {
+    left: 0;
+    right: 100vw;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100vw;
+    right: 0;
+  }
+}
 .menubar {
   position: fixed;
   top: 0;
@@ -71,4 +101,4 @@
   }
 }
 
-/*# sourceMappingURL=desktop.css.map */
+/*# sourceMappingURL=layout.css.map */
