@@ -1,12 +1,11 @@
 #frame-1 {
   width: 100%;
   min-height: 40vh;
-  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  padding: 2.25rem 4.5rem;
+  padding: 4.5rem;
 }
 #frame-1 .section {
   padding: 1rem;
@@ -33,6 +32,13 @@
 #frame-1 .section .dropdown .material-icons {
   padding: 0.375rem;
   cursor: pointer;
+}
+
+#frame-2 {
+  height: 60vh;
+  width: 100%;
+  background-color: var(--accent);
+  color: var(--on-accent);
 }
 
 #footer {

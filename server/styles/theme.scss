@@ -29,6 +29,9 @@
     --on-surface: hsl(18, 70%, 10%);
     --line: hsl(18, 15%, 70%);
 }
+
+// BODY STYLES
+
 body{
     background-color: var(--background);
     color: var(--on-background);
@@ -58,26 +61,6 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-button {
     display:none;
-}
-.surface{
-    padding: rem(8);
-    border-radius: rem(4);
-    background-color: var(--surface);
-    color: var(--on-surface);
-}
-.accent{
-    background-color: var(--accent);
-    color: var(--on-accent);
-}
-.compliment{
-    background-color: var(--compliment);
-    color: var(--on-compliment);
-}
-.surface{
-    background-color: var(--surface);
-    color: var(--on-surface);
-    padding: rem(8);
-    border-radius: rem(4);
 }
 
 //FONTS
@@ -138,8 +121,22 @@ body::-webkit-scrollbar-button {
     @include font(var(--handwriting-font), 500, 24, uppercase, 0.25, default);
 }
 
-// EXCLUDE & HIDE
+// RECYCLABLE CLASSES
 
+.accent{
+    background-color: var(--accent);
+    color: var(--on-accent);
+}
+.compliment{
+    background-color: var(--compliment);
+    color: var(--on-compliment);
+}
+.surface{
+    background-color: var(--surface);
+    color: var(--on-surface);
+    padding: rem(8);
+    border-radius: rem(4);
+}
 .exclude{
     display: none;
 }
@@ -154,4 +151,28 @@ body::-webkit-scrollbar-button {
 }
 .collapse{
     visibility: collapse;
+}
+
+// BUTTONS
+
+@mixin button{
+    color: inherit;
+    text-shadow: none;
+    cursor: pointer;
+    background-color: inherit;
+    box-shadow: none;
+    margin: rem(4);
+    border-width: 0;
+    border-style: solid;
+    border-color: inherit;
+    border-radius: 0;
+    font-family: var(--text-font);
+    font-weight: 500;
+    font-size: rem(14);
+    text-transform: uppercase;
+    letter-spacing: rem(1.25);
+    cursor: pointer;
+}
+.text-button{
+    @include button;
 }
