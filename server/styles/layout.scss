@@ -8,12 +8,12 @@
     margin-bottom: rem(12);
     line-height: 1.5;
 }
-.body-1, .body-2{
+.body-1, .body-2, .label, .caption{
     margin-bottom: rem(12);
     line-height: 1.5;
 }
 
-.progressbar{
+#progressbar{
     z-index: 10;
     position: fixed;
     top: 0;
@@ -40,7 +40,7 @@
     }
 }
 
-.menubar{
+#menubar{
     position: fixed;
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@
     }
 }
 
-.scroll-prompt{
+#scroll-prompt{
     position: fixed;
     // bottom: 0;
     left: 50%;
@@ -99,5 +99,36 @@
             visibility: visible;
             bottom: 0;
         }
+    }
+}
+#contact{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(450);
+    min-height: rem(100);
+    padding: rem(16);
+    border-radius: rem(4);
+    box-shadow: var(--shadow--1);
+    background-color: var(--surface);
+    color: var(--on-surface);
+    input{
+        width: 100%;
+        padding: rem(8);
+        border: none;
+        border-radius: rem(4);
+        background-color: var(--input);
+        color: var(--on-input);
+    }
+    textarea{
+        width: 100%;
+        height: rem(200);
+        resize: none;
+        padding: rem(8);
+        border: none;
+        border-radius: rem(4);
+        background-color: var(--input);
+        color: var(--on-input);
     }
 }

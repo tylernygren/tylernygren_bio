@@ -19,16 +19,30 @@ html(lang="en")
         //scripts
         script(defer src="/__/firebase/8.7.0/firebase-app.js")
     body.use-light-theme
-        .progressbar.hide
-        .menubar
+        #progressbar.hide
+        #menubar
             a.subtitle-1.active(href="/" style="order: 6;") Bio
             a.subtitle-1(href="/chiropractic" style="order: 5;") Chiropractic
             a.subtitle-1(href="/web+development" style="order: 4;") Web Development
             a.subtitle-1(href="/magic+tricks" style="order: 3;") Magic Tricks
             a.subtitle-1(href="/contact" style="order: 1;") Contact
-        
+
         block main
-        .scroll-prompt
+
+        form#contact
+            .label From
+            .flex
+                input(name="sender")
+                button Sign with Google
+                button Sign with Apple
+                button Sign with Microsoft
+            .label Message
+            textarea(name="message")
+            button.filled-button 
+                span.material-icons send
+                span Send Message
+        
+        #scroll-prompt
             .material-icons keyboard_arrow_down
 
         block scripts
