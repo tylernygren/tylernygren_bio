@@ -115,20 +115,21 @@
     color: var(--on-surface);
     input{
         width: 100%;
-        padding: rem(8);
-        border: none;
-        border-radius: rem(4);
-        background-color: var(--input);
-        color: var(--on-input);
+        margin-bottom: rem(12);
     }
     textarea{
         width: 100%;
         height: rem(200);
+        margin-bottom: rem(12);
         resize: none;
-        padding: rem(8);
-        border: none;
-        border-radius: rem(4);
-        background-color: var(--input);
-        color: var(--on-input);
     }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        button{
+            flex-grow: 1;
+        }
+    }
+
 }

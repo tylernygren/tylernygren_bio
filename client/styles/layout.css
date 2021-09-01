@@ -116,21 +116,21 @@
 }
 #contact input {
   width: 100%;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: var(--input);
-  color: var(--on-input);
+  margin-bottom: 0.75rem;
 }
 #contact textarea {
   width: 100%;
   height: 12.5rem;
+  margin-bottom: 0.75rem;
   resize: none;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: var(--input);
-  color: var(--on-input);
+}
+#contact .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#contact .buttons button {
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=layout.css.map */

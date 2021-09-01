@@ -29,18 +29,22 @@ html(lang="en")
 
         block main
 
-        form#contact
+        form#contact.hide
             .label From
-            .flex
-                input(name="sender")
-                button Sign with Google
-                button Sign with Apple
-                button Sign with Microsoft
+            input(name="sender")
             .label Message
             textarea(name="message")
-            button.filled-button 
-                span.material-icons send
-                span Send Message
+            .buttons
+                button
+                    .spacer
+                    .material-icons cancel
+                    span Cancel
+                    .spacer
+                button.accent
+                    .spacer
+                    .material-icons send
+                    span Send
+                    .spacer
         
         #scroll-prompt
             .material-icons keyboard_arrow_down

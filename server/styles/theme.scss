@@ -166,7 +166,7 @@ button{
     cursor: pointer;
     background-color: inherit;
     box-shadow: none;
-    padding: rem(6);
+    padding: rem(8);
     border-width: 0;
     border-style: solid;
     border-color: inherit;
@@ -182,6 +182,9 @@ button{
     .material-icons{
         font-size: rem(18);
     }
+    .spacer{
+        flex-grow: 1;
+    }
 }
 
 // INPUT
@@ -193,4 +196,5 @@ input, textarea{
     border-radius: rem(4);
     background-color: var(--input);
     color: var(--on-input);
+    cursor: text;
 }

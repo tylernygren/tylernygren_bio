@@ -213,7 +213,7 @@ button {
   cursor: pointer;
   background-color: inherit;
   box-shadow: none;
-  padding: 0.375rem;
+  padding: 0.5rem;
   border-width: 0;
   border-style: solid;
   border-color: inherit;
@@ -230,6 +230,9 @@ button * {
 button .material-icons {
   font-size: 1.125rem;
 }
+button .spacer {
+  flex-grow: 1;
+}
 
 input, textarea {
   font-family: var(--text-font);
@@ -243,6 +246,7 @@ input, textarea {
   border-radius: 0.25rem;
   background-color: var(--input);
   color: var(--on-input);
+  cursor: text;
 }
 
 /*# sourceMappingURL=theme.css.map */
