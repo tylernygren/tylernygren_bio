@@ -44,6 +44,7 @@ body{
     scrollbar-color: var(--background) var(--line);
     *{
         box-sizing: border-box;
+        line-height: 1.5;
     }
     --shadow--1: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
     --shadow--2: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
@@ -64,6 +65,12 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-button {
     display:none;
 }
+a, summary{
+    cursor: pointer;
+}
+input, textarea{
+    cursor: text;
+}
 
 //FONTS
 
@@ -80,10 +87,6 @@ body::-webkit-scrollbar-button {
     font-family: 'Roboto';
     src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
-@font-face {
-    font-family: 'NanumPenScript';
-    src: url('../fonts/NanumPenScript/NanumPenScript-Regular.ttf');
-}
 @mixin font($type, $weight, $size, $case, $spacing, $cursor){
     font-family: $type;
     font-weight: $weight;
@@ -92,35 +95,29 @@ body::-webkit-scrollbar-button {
     letter-spacing: rem($spacing);
     cursor: $cursor;
 }
-.title-1{
+.title-1, h1{
     @include font(var(--title-font), 500, 36, none, 0, default);
 }
-.title-2{
+.title-2, h2{
     @include font(var(--title-font), 500, 28, none, 0.25, default);
 }
-.subtitle-1{
+.subtitle-1, h3{
     @include font(var(--title-font), 500, 24, none, 0, default);
 }
-.subtitle-2{
+.subtitle-2, h4{
     @include font(var(--title-font), 500, 18, none, 0.5, default);
 }
-.body-1{
+.body-1, p{
     @include font(var(--text-font), 500, 16, none, 0.25, default);
 }
-.body-2{
+.body-2, details{
     @include font(var(--text-font), 500, 14, none, 0.25, default);
 }
-.caption{
+.caption, caption{
     @include font(var(--title-font), 300, 14, none, 0.4, default);
 }
-.label{
+.label, label{
     @include font(var(--title-font), 300, 14, none, 1.5, default);
-}
-.annotation-1{
-    @include font(var(--handwriting-font), 500, 36, uppercase, 0.25, default);
-}
-.annotation-2{
-    @include font(var(--handwriting-font), 500, 24, uppercase, 0.25, default);
 }
 
 // MODIFIERS
@@ -154,6 +151,135 @@ body::-webkit-scrollbar-button {
 .show{
     visibility: visible;
 }
+.column{
+    display: flex;
+    flex-direction: column;
+    &--center{
+        @extend .column;
+        align-items: center;
+    }
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &-reverse{
+        @extend .row;
+        flex-direction: row-reverse;
+    }
+}
+.spacer{
+    flex-grow: 1;
+}
+.grid{
+    display: grid;
+    gap: rem(16);
+    padding: rem(16);
+    &--6x6{
+        @extend .grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        .item{
+            border-radius: rem(4);
+            box-shadow: var(--shadow--1);
+            &--wide{
+                @extend .item;
+                grid-row: span 2;
+                grid-column: span 4;
+            }
+            &--tall{
+                @extend .item;
+                grid-row: span 4;
+                grid-column: span 2;
+            }
+            &--medium{
+                @extend .item;
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+            &--large{
+                @extend .item;
+                grid-row: span 4;
+                grid-column: span 4;
+            }
+        }
+    }
+    &--12x12{
+        @extend .grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        .item{
+            border-radius: rem(4);
+            box-shadow: var(--shadow--1);
+            &--wide{
+                @extend .item;
+                grid-row: span 4;
+                grid-column: span 8;
+            }
+            &--tall{
+                @extend .item;
+                grid-row: span 8;
+                grid-column: span 4;
+            }
+            &--medium{
+                @extend .item;
+                grid-row: span 4;
+                grid-column: span 4;
+            }
+            &--large{
+                @extend .item;
+                grid-row: span 8;
+                grid-column: span 8;
+            }
+        }
+    }
+    &--18x18{
+        @extend .grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+        .item{
+            border-radius: rem(4);
+            box-shadow: var(--shadow--1);
+            &--wide{
+                @extend .item;
+                grid-row: span 6;
+                grid-column: span 12;
+            }
+            &--tall{
+                @extend .item;
+                grid-row: span 12;
+                grid-column: span 6;
+            }
+            &--medium{
+                @extend .item;
+                grid-row: span 6;
+                grid-column: span 6;
+            }
+            &--large{
+                @extend .item;
+                grid-row: span 12;
+                grid-column: span 12;
+            }
+        }
+    }
+}
+.halves{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(32);
+    padding: rem(32);
+}
+.quarters{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(32);
+    padding: rem(32);
+}
+.image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 // BUTTON
 
@@ -181,9 +307,6 @@ button{
     }
     .material-icons{
         font-size: rem(18);
-    }
-    .spacer{
-        flex-grow: 1;
     }
 }
 
