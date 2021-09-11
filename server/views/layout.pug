@@ -21,31 +21,32 @@ html(lang="en")
     body.use-light-theme
         #progressbar.hide
         nav#menubar
-            a.subtitle-1.active(href="/" style="order: 6;") Bio
-            a.subtitle-1(href="/chiropractic" style="order: 5;") Chiropractic
-            a.subtitle-1(href="/web+development" style="order: 4;") Web Development
-            a.subtitle-1(href="/magic+tricks" style="order: 3;") Magic Tricks
+            a.subtitle-1.active(href="/" style="order: 6;") About
+            //- a.subtitle-1(href="/chiropractic" style="order: 5;") Chiropractic
+            //- a.subtitle-1(href="/web+development" style="order: 4;") Web Development
+            //- a.subtitle-1(href="/magic+tricks" style="order: 3;") Magic Tricks
             a.subtitle-1(href="/contact" style="order: 1;") Contact
         main
             block content
-        #scrim
-            form#contact.hide
-                .label From
-                input(name="sender")
-                .label Message
-                textarea(name="message")
-                .buttons
-                    button
-                        .spacer
-                        .material-icons cancel
-                        span Cancel
-                        .spacer
-                    button.accent
-                        .spacer
-                        .material-icons send
-                        span Send
-                        .spacer
+        //- #scrim
+        //-     form#contact.hide
+        //-         .label From
+        //-         input(name="sender")
+        //-         .label Message
+        //-         textarea(name="message")
+        //-         .buttons
+        //-             button
+        //-                 .spacer
+        //-                 .material-icons cancel
+        //-                 span Cancel
+        //-                 .spacer
+        //-             button.accent
+        //-                 .spacer
+        //-                 .material-icons send
+        //-                 span Send
+        //-                 .spacer
         footer
-            .material-icons info
+            .material-icons-outlined info
+            .body-2 Made by Tyler Nygren | September 2021
 
         block scripts

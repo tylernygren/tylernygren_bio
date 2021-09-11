@@ -38,6 +38,7 @@ body {
 }
 body * {
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 body::-webkit-scrollbar {
@@ -59,6 +60,14 @@ body::-webkit-scrollbar-button {
   display: none;
 }
 
+a, summary {
+  cursor: pointer;
+}
+
+input, textarea {
+  cursor: text;
+}
+
 :root {
   --title-font: "Open Sans";
   --text-font: "Roboto";
@@ -73,11 +82,7 @@ body::-webkit-scrollbar-button {
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
-@font-face {
-  font-family: "NanumPenScript";
-  src: url("../fonts/NanumPenScript/NanumPenScript-Regular.ttf");
-}
-.title-1 {
+.title-1, h1 {
   font-family: var(--title-font);
   font-weight: 500;
   font-size: 2.25rem;
@@ -86,7 +91,7 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.title-2 {
+.title-2, h2 {
   font-family: var(--title-font);
   font-weight: 500;
   font-size: 1.75rem;
@@ -95,7 +100,7 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.subtitle-1 {
+.subtitle-1, h3 {
   font-family: var(--title-font);
   font-weight: 500;
   font-size: 1.5rem;
@@ -104,7 +109,7 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.subtitle-2 {
+.subtitle-2, h4 {
   font-family: var(--title-font);
   font-weight: 500;
   font-size: 1.125rem;
@@ -113,7 +118,7 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.body-1 {
+.body-1, p {
   font-family: var(--text-font);
   font-weight: 500;
   font-size: 1rem;
@@ -122,7 +127,7 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.body-2 {
+.body-2, details {
   font-family: var(--text-font);
   font-weight: 500;
   font-size: 0.875rem;
@@ -131,7 +136,7 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.caption {
+.caption, caption {
   font-family: var(--title-font);
   font-weight: 300;
   font-size: 0.875rem;
@@ -140,30 +145,12 @@ body::-webkit-scrollbar-button {
   cursor: default;
 }
 
-.label {
+.label, label {
   font-family: var(--title-font);
   font-weight: 300;
   font-size: 0.875rem;
   text-transform: none;
   letter-spacing: 0.09375rem;
-  cursor: default;
-}
-
-.annotation-1 {
-  font-family: var(--handwriting-font);
-  font-weight: 500;
-  font-size: 2.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.015625rem;
-  cursor: default;
-}
-
-.annotation-2 {
-  font-family: var(--handwriting-font);
-  font-weight: 500;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.015625rem;
   cursor: default;
 }
 
@@ -204,6 +191,127 @@ body::-webkit-scrollbar-button {
   visibility: visible;
 }
 
+.column, .column--center {
+  display: flex;
+  flex-direction: column;
+}
+.column--center {
+  align-items: center;
+}
+
+.row, .row-reverse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.grid, .grid--18x18, .grid--12x12, .grid--6x6 {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+.grid--6x6 {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.grid--6x6 .item, .grid--6x6 .item--large, .grid--6x6 .item--medium, .grid--6x6 .item--tall, .grid--6x6 .item--wide {
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow--1);
+}
+.grid--6x6 .item--wide {
+  grid-row: span 2;
+  grid-column: span 4;
+}
+.grid--6x6 .item--tall {
+  grid-row: span 4;
+  grid-column: span 2;
+}
+.grid--6x6 .item--medium {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.grid--6x6 .item--large {
+  grid-row: span 4;
+  grid-column: span 4;
+}
+.grid--12x12 {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.grid--12x12 .item, .grid--12x12 .item--large, .grid--12x12 .item--medium, .grid--12x12 .item--tall, .grid--12x12 .item--wide {
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow--1);
+}
+.grid--12x12 .item--wide {
+  grid-row: span 4;
+  grid-column: span 8;
+}
+.grid--12x12 .item--tall {
+  grid-row: span 8;
+  grid-column: span 4;
+}
+.grid--12x12 .item--medium {
+  grid-row: span 4;
+  grid-column: span 4;
+}
+.grid--12x12 .item--large {
+  grid-row: span 8;
+  grid-column: span 8;
+}
+.grid--18x18 {
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+}
+.grid--18x18 .item, .grid--18x18 .item--large, .grid--18x18 .item--medium, .grid--18x18 .item--tall, .grid--18x18 .item--wide {
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow--1);
+}
+.grid--18x18 .item--wide {
+  grid-row: span 6;
+  grid-column: span 12;
+}
+.grid--18x18 .item--tall {
+  grid-row: span 12;
+  grid-column: span 6;
+}
+.grid--18x18 .item--medium {
+  grid-row: span 6;
+  grid-column: span 6;
+}
+.grid--18x18 .item--large {
+  grid-row: span 12;
+  grid-column: span 12;
+}
+
+.halves {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.quarters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow--1);
+}
+
 button {
   display: flex;
   flex-direction: row;
@@ -229,9 +337,6 @@ button * {
 }
 button .material-icons {
   font-size: 1.125rem;
-}
-button .spacer {
-  flex-grow: 1;
 }
 
 input, textarea {

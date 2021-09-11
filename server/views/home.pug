@@ -4,63 +4,32 @@ block styles
     link(rel="stylesheet", href="styles/home.css")
 
 block content
-    section#introduction.halves
-        .half
-            .title-1 Hi there! I'm Tyler.
-            .body-1 I'm a third generation chiropractic student with interest in developing web-based tools for chiropractors. I am also a casual runner, a coffee aficionado, and a spaceflight enthsiast. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit et porro rerum ab. Amet suscipit eum, tenetur error ipsum laborum tempore sapiente sunt maiores porro, mollitia praesentium perferendis atque doloribus.
+    section#summary.halves
+        #bio.half
+            .title-1 About
+            .body-1 Tyler Nygren is a third generation chiropractic student. He plans to join and continue his family's chiropractic practice. In his free time, he develops a web-based health record system for chiropractors. He is an avid space flight enthusiast and something of a coffee aficionado.
             .row-reverse
-                .glyph(style="background-image: url(./glyphs/facebook.svg);")
-                .glyph(style="background-image: url(./glyphs/twitter.svg);")
-                .glyph(style="background-image: url(./glyphs/instagram.svg);")
-                .glyph(style="background-image: url(./glyphs/linkedin.svg);")
-                .glyph(style="background-image: url(./glyphs/github.svg);")
-        .half.grid--6x6
-            .image.item--large(style="background-image: url(./photos/tyler.jpg);")
-            .image.item--tall(style="background-image: url(./photos/tyler.jpg);")
-            .image.item--wide(style="background-image: url(./photos/tyler.jpg);")
-            .image.item--medium(style="background-image: url(./photos/tyler.jpg);")
-    section#resume.quarters
+                a.glyph(href="" style="background-image: url(./glyphs/facebook.svg);")
+                a.glyph(href="" style="background-image: url(./glyphs/twitter.svg);")
+                a.glyph(href="" style="background-image: url(./glyphs/instagram.svg);")
+                a.glyph(href="" style="background-image: url(./glyphs/linkedin.svg);")
+                a.glyph(href="" style="background-image: url(./glyphs/github.svg);")
+        #headshot.half
+            .image(style="background-image: url(./photos/tyler.jpg);")
+    section#details.quarters
         .quarter
             .material-icons-outlined school
-            .subtitle-1 Education
-            details Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt vitae vel velit tempore itaque quo, eligendi sapiente voluptates? Voluptates itaque iste dolorum velit ipsa nostrum sunt, sapiente facere consectetur!
-                summary Doctor of Chiropractic (2022)
-            details 
-                summary Bachelor of Science in Biology (2019)
-            details 
-                summary High School Diploma (2017)
+            .subtitle-2 Education
+            .body-2 Tyler received his Bachelor of Science in Biology from Life University in 2019. He is now in his final year of the Doctor of Chiropractic (DC) program offered by the same university. The DC program lasts four years, culminating in 18 months supervised clinical experience. Tyler is currently working as an intern under the direction Dr. Bob Bacon, DC. He has passed three of four national board exams, with the final exam scheduled for November 2021. His state licensing exams will take place after his graduation in March 2022. Shortly thereafter, he plans to begin the education and certification necessary to practice acupuncture.
         .quarter
-            .material-icons-outlined work_outline
-            .subtitle-1 Experience
-            details 
-                summary East Cobb Spine and Sport Chiropractic
-            details 
-                summary Life University Clinic System
-            details 
-                summary Life University Procurement Office
-            details 
-                summary Starbucks Corporation
+            .material-icons-outlined work_outlined
+            .subtitle-2 Career
+            .body-2 Tyler will work as a chiropractor alongside his mother in Van Wert, Ohio. Chiropractic is a licensed health care profession that focuses on disorders of the musculoskeletal system. Doctors of chiropractic provide conservative treatment options for back pain, neck pain, joint pain, and headaches. They are trained in all areas of patient care, with broad skills in examination, diagnosis, and treatment. Chiropractors specialize in spinal manipulation, the adjustment of dysfunctional spinal segments with quick, shallow thrusts. Adjustments are done to reduce pain, increase range of motion, and to improve overall function.
         .quarter
             .material-icons-outlined interests
-            .subtitle-1 Interests
-            details 
-                summary Web Development
-            details 
-                summary Magic Tricks
-            details 
-                summary Electronics
-            details 
-                summary Coffee
-            details 
-                summary Spaceflight
+            .subtitle-2 Interests
+            .body-2 Tyler began learning JavaScript as a hobby in early 2020. He quickly discovered the immense developer community and its many educational resources. By the end of the year he had developed basic proficiency with the Node runtime environment, building games and websites. In 2021, he shifted his focus to developing useful tools that could support the work of chiropractors. He is currently building an open-source electronic health record system that is meant to meet the specific needs of chiropractors while enhancing the quality of their records.
         .quarter
-            .material-icons-outlined map
-            .subtitle-1 Plan
-            details 
-                summary Career
-            details 
-                summary Family
-            details 
-                summary Community
-            details 
-                summary Projects
+            .material-icons-outlined people
+            .subtitle-2 Family
+            .body-2 Tyler is the son of Adam and Nichole Nygren. He is their first child, with one sister. He is fortunate to have enabling and supportive parents, and excited to work in closely with them. His grandparents have had, and continue to have, an active role in his life. Tyler is in a relationship with Barbora Kocsisova. His social circle consists primarily of classmates.

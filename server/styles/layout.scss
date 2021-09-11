@@ -42,6 +42,7 @@ main{
     flex-direction: row-reverse;
     align-items: stretch;
     background-color: var(--background);
+    box-shadow: var(--shadow--2);
     a{
         vertical-align: middle;
         margin: 0 rem(8);
@@ -64,39 +65,16 @@ main{
     }
 }
 
-#contact{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: rem(450);
-    min-height: rem(100);
-    padding: rem(16);
-    border-radius: rem(4);
-    box-shadow: var(--shadow--1);
-    background-color: var(--surface);
-    color: var(--on-surface);
-    input{
-        width: 100%;
-        margin-bottom: rem(12);
-    }
-    textarea{
-        width: 100%;
-        height: rem(200);
-        margin-bottom: rem(12);
-        resize: none;
-    }
-    .buttons{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        button{
-            flex-grow: 1;
-        }
-    }
-
-}
 footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--accent);
     color: var(--on-accent);
+    padding-top: rem(36);
+    .material-icons-outlined{
+        padding: rem(12);
+        font-size: rem(24);
+        cursor: pointer;
+    }
 }

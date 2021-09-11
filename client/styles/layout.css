@@ -1,16 +1,5 @@
-.title-1, .tile-2 {
-  margin-bottom: 1.125rem;
-  line-height: 1.5;
-}
-
-.subtitle-1, .subtitle-2 {
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
-}
-
-.body-1, .body-2, .label, .caption {
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+main {
+  margin-top: 3rem;
 }
 
 #progressbar {
@@ -51,6 +40,7 @@
   flex-direction: row-reverse;
   align-items: stretch;
   background-color: var(--background);
+  box-shadow: var(--shadow--2);
 }
 #menubar a {
   vertical-align: middle;
@@ -73,64 +63,18 @@
   color: var(--on-accent);
 }
 
-#scroll-prompt {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  visibility: hidden;
-  background-color: transparent;
-  animation: scrollPrompt 1s ease-out 1s 1 forwards;
-}
-#scroll-prompt .material-icons {
-  font-size: 3rem;
-  color: var(--on-accent);
-}
-@keyframes scrollPrompt {
-  0% {
-    opacity: 40%;
-    visibility: visible;
-    bottom: 3rem;
-  }
-  100% {
-    opacity: 100%;
-    visibility: visible;
-    bottom: 0;
-  }
-}
-
-#contact {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 28.125rem;
-  min-height: 6.25rem;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: var(--shadow--1);
-  background-color: var(--surface);
-  color: var(--on-surface);
-}
-#contact input {
-  width: 100%;
-  margin-bottom: 0.75rem;
-}
-#contact textarea {
-  width: 100%;
-  height: 12.5rem;
-  margin-bottom: 0.75rem;
-  resize: none;
-}
-#contact .buttons {
+footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: var(--accent);
+  color: var(--on-accent);
+  padding-top: 2.25rem;
 }
-#contact .buttons button {
-  flex-grow: 1;
+footer .material-icons-outlined {
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=layout.css.map */
