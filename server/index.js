@@ -7,7 +7,7 @@ app.set('view engine', 'pug');
 // app.use('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('home', { title: 'About'});
+    res.render('home', { title: 'Bio'});
 });
 
 exports.app = functions.https.onRequest(app);

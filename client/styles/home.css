@@ -2,54 +2,186 @@ section {
   width: 100%;
 }
 
-#summary {
-  min-height: 60vh;
-  text-align: justify;
-}
-#summary #bio {
-  max-width: 37.5rem;
-  justify-self: end;
-  margin-right: 1.125rem;
-}
-#summary #bio .title-1 {
-  margin-bottom: 1.5rem;
-}
-#summary #bio .body-1 {
-  margin-bottom: 1rem;
-}
-#summary #headshot .image {
-  max-width: 25rem;
-  height: 100%;
-  justify-self: start;
-  margin-left: 1.125rem;
-}
-#summary .half .row-reverse {
-  width: 100%;
-}
-#summary .half .row-reverse .glyph {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.75rem;
-  cursor: pointer;
-}
+@media screen and (min-width: 1200px) {
+  #summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 60vh;
+    text-align: justify;
+  }
+  #summary #bio {
+    max-width: 37.5rem;
+    justify-self: end;
+    margin-right: 1.125rem;
+  }
+  #summary #bio .title-1 {
+    margin-bottom: 1.5rem;
+  }
+  #summary #bio .body-1 {
+    margin-bottom: 1rem;
+  }
+  #summary #bio .row-reverse {
+    width: 100%;
+  }
+  #summary #bio .row-reverse .glyph {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.75rem;
+    cursor: pointer;
+  }
+  #summary #headshot .image {
+    max-width: 37.5rem;
+    height: 100%;
+    justify-self: start;
+    margin-left: 1.125rem;
+  }
 
-#details {
-  min-height: 40vh;
-  background-color: var(--accent);
-  color: var(--on-accent);
+  #details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 40vh;
+    background-color: var(--accent);
+    color: var(--on-accent);
+  }
+  #details section .material-icons-outlined {
+    width: 100%;
+    text-align: center;
+    font-size: 2.25rem;
+    cursor: default;
+  }
+  #details .subtitle-2 {
+    margin-bottom: 1.125rem;
+  }
+  #details .body-2 {
+    line-height: 1.5;
+    text-align: justify;
+  }
 }
-#details .quarter .material-icons-outlined {
-  width: 100%;
-  text-align: center;
-  font-size: 2.25rem;
-  cursor: default;
+@media screen and (min-width: 700px) and (max-width: 1199px) {
+  #summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 60vh;
+    text-align: justify;
+  }
+  #summary #bio {
+    max-width: 37.5rem;
+    justify-self: end;
+    margin-right: 1.125rem;
+  }
+  #summary #bio .title-1 {
+    margin-bottom: 1.5rem;
+  }
+  #summary #bio .body-1 {
+    margin-bottom: 1rem;
+  }
+  #summary #bio .row-reverse {
+    width: 100%;
+  }
+  #summary #bio .row-reverse .glyph {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.75rem;
+    cursor: pointer;
+  }
+  #summary #headshot .image {
+    max-width: 37.5rem;
+    height: 100%;
+    justify-self: start;
+    margin-left: 1.125rem;
+  }
+
+  #details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 40vh;
+    background-color: var(--accent);
+    color: var(--on-accent);
+  }
+  #details section .material-icons-outlined {
+    width: 100%;
+    text-align: center;
+    font-size: 2.25rem;
+    cursor: default;
+  }
+  #details .subtitle-2 {
+    margin-bottom: 1.125rem;
+  }
+  #details .body-2 {
+    line-height: 1.5;
+    text-align: justify;
+  }
 }
-#details .subtitle-2 {
-  margin-bottom: 1.125rem;
-}
-#details .body-2 {
-  line-height: 1.5;
-  text-align: justify;
+@media screen and (max-width: 699px) {
+  #summary {
+    display: grid;
+    grid-template-rows: repeat(2, max(1fr));
+    min-height: 60vh;
+    text-align: justify;
+  }
+  #summary #bio {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.125rem;
+  }
+  #summary #bio .title-1 {
+    width: 100%;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  #summary #bio .body-1 {
+    margin-bottom: 0.5rem;
+  }
+  #summary #bio .row-reverse .glyph {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0.75rem 0.5rem;
+    cursor: pointer;
+  }
+  #summary #headshot {
+    grid-row: 1/2;
+  }
+  #summary #headshot .image {
+    width: 100%;
+    height: 30vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #details {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 60vh;
+    background-color: var(--accent);
+    color: var(--on-accent);
+  }
+  #details section .material-icons-outlined {
+    width: 100%;
+    text-align: center;
+    font-size: 2.25rem;
+    cursor: default;
+  }
+  #details .subtitle-2 {
+    margin-bottom: 1.125rem;
+  }
+  #details .body-2 {
+    line-height: 1.5;
+    text-align: justify;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

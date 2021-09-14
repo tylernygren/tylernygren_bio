@@ -40,7 +40,6 @@ main {
   flex-direction: row-reverse;
   align-items: stretch;
   background-color: var(--background);
-  box-shadow: var(--shadow--2);
 }
 #menubar a {
   vertical-align: middle;
